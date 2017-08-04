@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AppDojo</string>
+    <string name="app_name">Login</string>
+
+    <string name="user_name">username</string>
+    <string name="password">password</string>
+    <string name="log_in">Log in</string>
+    >
 </resources>
