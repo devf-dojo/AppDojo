@@ -4,5 +4,10 @@ package dojo.f.dev.com.appdojo.login;
  * Created by Administrador on 08/08/17.
  */
 
-public class LoginPresenter {
+public interface LoginPresenter {
+
+    void login();
+
+
+
 }
