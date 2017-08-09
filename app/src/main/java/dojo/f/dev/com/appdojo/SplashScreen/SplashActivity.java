@@ -15,11 +15,10 @@ import dojo.f.dev.com.appdojo.login.LoginActivity;
  * Created by Administrador on 08/08/17.
  */
 
-public class SplashActivity extends AppCompatActivity implements SplashView{
+public class SplashActivity extends AppCompatActivity implements SplashView {
 
     private SplashPresenter splashPresenter;
     private PreferencesManager preferencesDevf;
-
 
 
     @Override
@@ -27,17 +26,16 @@ public class SplashActivity extends AppCompatActivity implements SplashView{
         super.onCreate(savedInstanceState);
 
         preferencesDevf = new PreferencesManagerImp(this);
-        splashPresenter = new SplashPresenterImp(this,preferencesDevf);
+        splashPresenter = new SplashPresenterImp(this, preferencesDevf);
 
         splashPresenter.navigation();
     }
 
 
-
     @Override
     public void goToMain() {
 
-       startActivity( new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
         finish();
 
     }

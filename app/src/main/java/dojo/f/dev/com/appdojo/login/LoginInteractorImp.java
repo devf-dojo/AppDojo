@@ -14,7 +14,7 @@ public class LoginInteractorImp implements LoginInteractor{
 
         if(listener.onLoginSucess()){
 
-            apiDojo.getCv();
+            //apiDojo.getCv();
 
         }
 

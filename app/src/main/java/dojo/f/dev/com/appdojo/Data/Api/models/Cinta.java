@@ -8,8 +8,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class Cinta {
 
-    @SerializedName("cinta")
-    String cinta;
+    @SerializedName("belt")
+    String belt;
 
     @SerializedName("batch")
     int batch;

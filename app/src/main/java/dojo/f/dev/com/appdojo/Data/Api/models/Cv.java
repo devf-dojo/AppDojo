@@ -19,23 +19,23 @@ public class Cv {
     @SerializedName("photo")
     String photo;
 
-    @SerializedName("cintas")
-    List<Cinta> cintas;
+    @SerializedName("belts")
+    List<Cinta> belts;
 
     @SerializedName("skills")
     List<String> skills;
 
-    @SerializedName("bio")
-    String bio;
+    @SerializedName("biography")
+    String biography;
 
-    @SerializedName("telefono")
-    String telefono;
+    @SerializedName("phone")
+    String phone;
 
-    @SerializedName("intereses")
-    List<String> intereses;
+    @SerializedName("interests")
+    List<String> interests;
 
-    @SerializedName("hoobies")
-    List<String> hoobbies;
+    @SerializedName("hobbies")
+    List<String> hobbies;
 
     @SerializedName("website")
     String website;
@@ -51,35 +51,6 @@ public class Cv {
 
     @SerializedName("github")
     String github;
-
-    @SerializedName("languajes")
-    List<String> languages;
-
-    public Cv(String name, String email, String photo, List<Cinta> cintas, List<String> skills, String bio, String telefono, List<String> intereses, List<String> hoobbies, String website, String facebook, String twitter, String linkedin, String github, List<String> languages) {
-        this.name = name;
-        this.email = email;
-        this.photo = photo;
-        this.cintas = cintas;
-        this.skills = skills;
-        this.bio = bio;
-        this.telefono = telefono;
-        this.intereses = intereses;
-        this.hoobbies = hoobbies;
-        this.website = website;
-        this.facebook = facebook;
-        this.twitter = twitter;
-        this.linkedin = linkedin;
-        this.github = github;
-        this.languages = languages;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
@@ -97,12 +68,12 @@ public class Cv {
         this.photo = photo;
     }
 
-    public List<Cinta> getCintas() {
-        return cintas;
+    public List<Cinta> getBelts() {
+        return belts;
     }
 
-    public void setCintas(List<Cinta> cintas) {
-        this.cintas = cintas;
+    public void setBelts(List<Cinta> belts) {
+        this.belts = belts;
     }
 
     public List<String> getSkills() {
@@ -113,36 +84,36 @@ public class Cv {
         this.skills = skills;
     }
 
-    public String getBio() {
-        return bio;
+    public String getBiography() {
+        return biography;
     }
 
-    public void setBio(String bio) {
-        this.bio = bio;
+    public void setBiography(String biography) {
+        this.biography = biography;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public List<String> getIntereses() {
-        return intereses;
+    public List<String> getInterests() {
+        return interests;
     }
 
-    public void setIntereses(List<String> intereses) {
-        this.intereses = intereses;
+    public void setInterests(List<String> interests) {
+        this.interests = interests;
     }
 
-    public List<String> getHoobbies() {
-        return hoobbies;
+    public List<String> getHobbies() {
+        return hobbies;
     }
 
-    public void setHoobbies(List<String> hoobbies) {
-        this.hoobbies = hoobbies;
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
     }
 
     public String getWebsite() {
@@ -191,5 +162,16 @@ public class Cv {
 
     public void setLanguages(List<String> languages) {
         this.languages = languages;
+    }
+
+    @SerializedName("languajes")
+    List<String> languages;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
