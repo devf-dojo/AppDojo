@@ -40,17 +40,11 @@ public class RedirectUriReceiverActivity extends AppCompatActivity {
   OkHttpClient client = new OkHttpClient();
 
   void run(String token) {
-    RequestBody formBody = new FormBody.Builder()
-      .add("client_id", "<CLIENT_ID>")
-      .add("client_secret", "<CLIENT_SECRET>")
-      .add("code", token)
-      .add("accept", "json")
-      .build();
 
     Request request = new Request.Builder()
-      .url("https://github.com/login/oauth/access_token")
+      .url("https://us-central1-devf-dojo-admin.cloudfunctions.net/api/v1/dojo/auth/login_github?code=" + token)
       .addHeader("Accept", "application/json")
-      .post(formBody)
+      .get()
       .build();
 
     client.newCall(request).enqueue(new Callback() {
