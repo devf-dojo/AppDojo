@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <dimen name="login_btn_padding_horizontal">16dp</dimen>
+    <dimen name="login_text_size">20sp</dimen>
+    <dimen name="login_horizontal_padding">8dp</dimen>
+</resources>

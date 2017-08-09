@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Login</string>
-
     <string name="user_name">username</string>
     <string name="password">password</string>
-    <string name="log_in">Log in</string>
-    >
+    <string name="log_in">Log in</string>>
+    <string name="btn_login_github">Iniciar con github</string>
+    <string name="text_login_title">Unete al movimiento hacker mas grande de america latina.</string>
 </resources>

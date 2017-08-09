@@ -1,16 +1,19 @@
-package dojo.f.dev.com.appdojo.Login;
+package dojo.f.dev.com.appdojo.app;
 
 import android.app.Application;
 import android.os.SystemClock;
 
-import java.util.concurrent.TimeUnit;
+/**
+ * Created by Administrador on 08/08/17.
+ */
 
 public class App extends Application {
+
+
     @Override
     public void onCreate() {
         super.onCreate();
-        SystemClock.sleep(TimeUnit.SECONDS.toMillis(3));
+        SystemClock.sleep(3000);
+
     }
-
 }
-
