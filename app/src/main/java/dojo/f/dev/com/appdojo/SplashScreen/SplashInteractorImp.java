@@ -15,8 +15,8 @@ public class SplashInteractorImp implements SplashInteractor{
 
         if(preferences.getPreferencesUser().isEmpty()&&preferences.getPreferencesPass().isEmpty()){
 
-
             navigation.onLogin();
+
         }else {
 
             navigation.onSaveLogin();

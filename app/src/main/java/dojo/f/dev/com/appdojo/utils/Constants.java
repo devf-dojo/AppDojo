@@ -11,4 +11,5 @@ public class Constants {
     public static final String PREFERENCES_DEVF_KEY_PASS = "pass";
     public static final String PREFERENCES_DEFF_KEY_USER = "user";
     public static final String PREFERENCES_DEVF_KEY_TOKEN = "token";
+    public static final String URL_BASE_DOJO = "https://us-central1-devf-dojo-admin.cloudfunctions.net/";
 }

@@ -8,13 +8,10 @@ public class SplashPresenterImp implements SplashPresenter, SplashInteractor.onN
     private final SplashInteractor splashInteractor;
     private final PreferencesManager preferencesDevf;
 
-
-
     public SplashPresenterImp(SplashView view, PreferencesManager preferences){
         splashView = view;
         preferencesDevf = preferences;
         splashInteractor = new SplashInteractorImp();
-
 
     }
 
