@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-
+    <!-- Login -->
     <dimen name="login_btn_padding_horizontal">16dp</dimen>
     <dimen name="login_text_size">20sp</dimen>
     <dimen name="login_horizontal_padding">8dp</dimen>
+
+
+    <!-- Tu Cv -->
+    <dimen name="login_btn_padding_horizontal_cv">198dp</dimen>
+    <dimen name="login_text_size_cv">25sp</dimen>
+    <dimen name="login_horizontal_padding_cv">149dp</dimen>
 </resources>

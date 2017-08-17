@@ -5,4 +5,20 @@
     <string name="log_in">Log in</string>>
     <string name="btn_login_github">Iniciar con github</string>
     <string name="text_login_title">Unete al movimiento hacker mas grande de america latina.</string>
+    <string name="text_cv">CV</string>
+
+
+
+    <string-array name="cintas">
+        <item>CINTA BLANCA</item>
+        <item>CINTA ROJA</item>
+        <item>CINTA NEGRA FRONT-END</item>
+        <item>CINTA NEGRA BACK-END</item>
+        <item>CINTA NEGRA ANDROID</item>
+
+    </string-array>
+
+
+
+
 </resources>
