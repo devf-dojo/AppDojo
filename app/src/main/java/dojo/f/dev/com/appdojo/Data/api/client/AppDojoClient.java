@@ -39,14 +39,16 @@ public class AppDojoClient implements AppDojoService {
         }
         user.getToken(false)
                 .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
-                    public void onComplete(@NonNull Task<GetTokenResult> task) {
-                        callback.onGetToken(task.getResult().getToken() , task.isSuccessful());
-                    }}
+                                           public void onComplete(@NonNull Task<GetTokenResult> task) {
+                                               callback.onGetToken(task.getResult().getToken(), task.isSuccessful());
+                                           }
+                                       }
                 );
     }
 
+
     @Override
-    public void getCv(final String uid) {
+    public void getCv(final String uid, final onGetCvListener callback) {
         getToken(new onGetTokenListener() {
             @Override
             public void onGetToken(@Nullable String idToken, boolean is_success_full) {
@@ -56,21 +58,18 @@ public class AppDojoClient implements AppDojoService {
                     api.getCv(uid, "Bearer " + idToken).enqueue(new Callback<Cv>() {
                         @Override
                         public void onResponse(Call<Cv> call, Response<Cv> response) {
-                            if(response.code()==404){
-                                // TODO: on 404
-                                return;
-                            }
                             Cv cv = response.body();
-                            //String email = cv.getEmail();
+                            callback.onGetCvListener(cv, response.code() == 200);
                         }
 
                         @Override
                         public void onFailure(Call<Cv> call, Throwable t) {
-
+                            callback.onGetCvListener(null, false);
                         }
                     });
                 } else {
                     // TODO: Handle error -> task.getException();
+                    callback.onGetCvListener(null, false);
                 }
             }
         });
