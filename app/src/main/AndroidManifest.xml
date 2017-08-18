@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  package="dojo.f.dev.com.appdojo">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dojo.f.dev.com.appdojo">
 
-  <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
-  <application
-    android:allowBackup="true"
-    android:fullBackupContent="@xml/my_backup_rules"
-    android:icon="@mipmap/ic_dev_f"
-    android:label="@string/app_name"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
-      <activity
-      android:name=".Main.MainActivity"
-      android:screenOrientation="portrait"/>
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/my_backup_rules"
+        android:icon="@mipmap/ic_dev_f"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Main.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="My Cv"/>
+        <activity
+            android:name=".login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-    <activity
-      android:name=".login.LoginActivity"
-      android:theme="@style/AppTheme"
-      android:launchMode="singleTask"
-      android:screenOrientation="portrait">
-      <intent-filter>
-        <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-        <category android:name="android.intent.category.DEFAULT"/>
-        <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="devf-dojo-admin.firebaseapp.com"
+                    android:path="/__/auth/handler"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashScreen.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <data
-          android:scheme="https"
-          android:host="devf-dojo-admin.firebaseapp.com"
-          android:path="/__/auth/handler"/>
-      </intent-filter>
-    </activity>
-
-    <activity
-      android:name=".SplashScreen.SplashActivity"
-      android:theme="@style/SplashTheme">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-
-        <category android:name="android.intent.category.LAUNCHER"/>
-      </intent-filter>
-    </activity>
-  </application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
