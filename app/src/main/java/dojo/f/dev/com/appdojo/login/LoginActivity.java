@@ -1,9 +1,12 @@
 package dojo.f.dev.com.appdojo.login;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Toast;
 import android.net.Uri;
 import android.net.UrlQuerySanitizer;
@@ -14,6 +17,8 @@ import android.widget.Button;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
+
+import java.util.List;
 
 import dojo.f.dev.com.appdojo.Data.Api.client.AppDojoClient;
 import dojo.f.dev.com.appdojo.Main.MainActivity;
@@ -81,6 +86,19 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                 builder.enableUrlBarHiding();
                 builder.setShowTitle(true);
                 CustomTabsIntent customTabsIntent = builder.build();
+
+                String PACKAGE_NAME = "com.android.chrome";
+
+                customTabsIntent.intent.setData(Uri.parse(Constants.URL_LOGIN_GITHUB));
+
+                PackageManager packageManager = getPackageManager();
+                List<ResolveInfo> resolveInfoList = packageManager.queryIntentActivities(customTabsIntent.intent, PackageManager.MATCH_DEFAULT_ONLY);
+
+                for (ResolveInfo resolveInfo : resolveInfoList) {
+                    String packageName = resolveInfo.activityInfo.packageName;
+                    if (TextUtils.equals(packageName, PACKAGE_NAME))
+                        customTabsIntent.intent.setPackage(PACKAGE_NAME);
+                }
                 customTabsIntent.launchUrl(LoginActivity.this, Uri.parse(Constants.URL_LOGIN_GITHUB));
             }
         });

@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_logout) {
             // Handle the camera action
-
+            LiveUser.mAuth.signOut();
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         }

@@ -34,19 +34,35 @@
                     fresco:placeholderImage="@drawable/ic_profile"
                     />
 
-                <TextView
-                    android:id="@+id/name_cv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/email_cv"
-                    android:layout_width="wrap_content"
+                <android.support.design.widget.TextInputLayout
                     android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:textSize="12sp"/>
+                    android:layout_width="wrap_content">
+
+                    <EditText
+                        android:id="@+id/name_cv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:hint="@string/user_name"
+                        android:inputType="textPersonName"
+                        android:minWidth="100dp"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content">
+
+                    <EditText
+                        android:id="@+id/email_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:textSize="12sp"
+                        android:inputType="textEmailAddress"
+                        android:minWidth="100dp"/>
+                </android.support.design.widget.TextInputLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -54,17 +70,22 @@
                     android:text="Mexico"
                     android:layout_marginBottom="18dp"/>
 
-                <EditText
-                    android:id="@+id/phone_cv"
-                    android:layout_width="wrap_content"
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/ic_action_cel"
-                    android:hint="Telefono"
-                    android:inputType="phone"
-                    android:textSize="16sp" />
+                    android:layout_width="wrap_content">
+                    <EditText
+                        android:id="@+id/phone_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_action_cel"
+                        android:hint="@string/telefono"
+                        android:inputType="phone"
+                        android:textSize="16sp"
+                        android:minWidth="100dp"/>
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
-
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -76,50 +97,30 @@
                 android:orientation="vertical"
                 android:layout_margin="8dp">
 
-                <TextView
-                    android:layout_width="match_parent"
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_height="wrap_content"
-                    android:text="Biography"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
+                    android:layout_width="match_parent">
+                    <EditText
+                        android:id="@+id/biography_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Biography"
+                        android:maxLines="4"
+                        />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/biography_cv"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Description"
-                    android:maxLines="4"
-                    />
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="8dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Skills"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
-
-                <EditText
-                    android:id="@+id/skills_cv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Add"
-                    android:maxLines="4"
-                    />
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/skills_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Skills"
+                        android:maxLines="4"
+                        />
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
 
